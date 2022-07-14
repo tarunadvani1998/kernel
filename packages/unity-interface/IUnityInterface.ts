@@ -23,7 +23,8 @@ import {
   Notification,
   UpdateUserStatusMessage,
   WorldPosition,
-  AddFriendsPayload
+  AddFriendsPayload,
+  AddFriendRequestsPayload
 } from '../shared/types'
 import { FeatureFlag } from 'shared/meta/types'
 import { IFuture } from 'fp-future'
@@ -138,6 +139,7 @@ export interface IUnityInterface {
   UpdateUserPresence(status: UpdateUserStatusMessage): void
   FriendNotFound(queryString: string): void
   AddFriends(addFriendsPayload: AddFriendsPayload): void
+  AddFriendRequests(addFriendRequestsPayload: AddFriendRequestsPayload): void
 
   RequestTeleport(teleportData: {}): void
   UpdateHotScenesList(info: HotSceneInfo[]): void
